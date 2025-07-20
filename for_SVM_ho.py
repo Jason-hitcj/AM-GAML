@@ -7,7 +7,8 @@ from sklearn.svm import SVC
 from sklearn.metrics.pairwise import cosine_similarity
 
 # -------------------- 加载原始数据 --------------------
-raw_df = pd.read_csv('data_new/preprocessed_data_gnn_full.csv')
+raw_df_1 = pd.read_csv('data_new/preprocessed_data_gnn_full.csv')
+raw_df = raw_df_1.drop('target', axis=1)
 raw_df = raw_df.groupby('CUST_ID', as_index=False).first()
 
 # 加载LSTM特征
