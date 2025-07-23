@@ -52,16 +52,16 @@ print(f"验证集形状: X_val={X_val.shape}, y_val={y_val.shape}")
 print(f"测试集形状: X_test={X_test.shape}, y_test={y_test.shape}")
 
 
-# 8. 训练标准的SVM模型 (修正部分)
+# 8. 训练标准的SVM模型
 print("\n===== 开始训练SVM模型 =====")
 
 # C 和 gamma 是最重要的超参数，可以后续使用验证集进行调优
 svm_model = SVC(
     kernel='rbf', 
-    C=3.0, 
+    C=0.1, 
     gamma='scale', 
     probability=True, 
-    class_weight='balanced',
+    class_weight=None,
     random_state=42
 )
 

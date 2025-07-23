@@ -1,0 +1,90 @@
+LSTM 中间结果
+
+Epoch 1 Training Metrics:
+Accuracy: 0.8067
+Precision: 0.4033
+Recall: 0.5000
+F1 Score: 0.4465
+AUPRC: 0.1734
+
+Epoch 11 Training Metrics:
+Accuracy: 0.8067
+Precision: 0.4033
+Recall: 0.5000
+F1 Score: 0.4465
+AUPRC: 0.3368
+
+Epoch 21 Training Metrics:
+Accuracy: 0.8143
+Precision: 0.9065
+Recall: 0.5199
+F1 Score: 0.4866
+AUPRC: 0.4659
+
+Epoch 31 Training Metrics:
+Accuracy: 0.8143
+Precision: 0.9065
+Recall: 0.5199
+F1 Score: 0.4866
+AUPRC: 0.5312
+
+Epoch 41 Training Metrics:
+Accuracy: 0.8668
+Precision: 0.8878
+Recall: 0.6682
+F1 Score: 0.7116
+AUPRC: 0.7365
+
+Epoch 51 Training Metrics:
+Accuracy: 0.8758
+Precision: 0.8909
+Recall: 0.6939
+F1 Score: 0.7404
+AUPRC: 0.7244
+
+Epoch 61 Training Metrics:
+Accuracy: 0.8873
+Precision: 0.9019
+Recall: 0.7237
+F1 Score: 0.7724
+AUPRC: 0.7541
+
+Epoch 71 Training Metrics:
+Accuracy: 0.8771
+Precision: 0.9042
+Recall: 0.6922
+F1 Score: 0.7401
+AUPRC: 0.7796
+
+Epoch 81 Training Metrics:
+Accuracy: 0.8848
+Precision: 0.8996
+Recall: 0.7171
+F1 Score: 0.7655
+AUPRC: 0.7413
+
+Epoch 91 Training Metrics:
+Accuracy: 0.8860
+Precision: 0.8748
+Recall: 0.7355
+F1 Score: 0.7787
+AUPRC: 0.7575
+
+Epoch 101 Training Metrics:
+Accuracy: 0.8873
+Precision: 0.8880
+Recall: 0.7313
+F1 Score: 0.7773
+AUPRC: 0.7951
+
+
+
+
+
+
+
+
+
+
+
+

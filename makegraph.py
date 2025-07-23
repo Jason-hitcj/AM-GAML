@@ -77,6 +77,6 @@ data['fund', 'rev_invests', 'customer'].edge_attr = edge_attr
 
 print(data)
 
-# ✅ 保存图数据
+# 保存图数据
 torch.save(data, 'data_new/hetero_graph.pt')
 print("图数据已保存到 data_new/hetero_graph.pt")

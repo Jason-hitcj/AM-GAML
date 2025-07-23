@@ -1,0 +1,662 @@
+LSTM 测试实验结果
+Test Results:
+acc: 0.9253
+precision: 0.9093
+recall: 0.7940
+f1: 0.8374
+auprc: 0.7825
+
+SVM 测试实验结果
+===== 在 最终测试集 上的评估指标 =====
+Accuracy     : 0.9117
+Precision    : 0.9362
+Recall       : 0.4731
+F1 Score     : 0.6286
+AUPRC        : 0.7369
+
+===== XGBoost 最终测试集评估指标 =====
+最佳迭代次数: 40
+Accuracy     : 0.8421
+Precision    : 0.5000
+Recall       : 0.8817
+F1 Score     : 0.6381
+AUPRC        : 0.8197
+
+===== GBDT 最终测试集评估指标 =====
+最佳迭代次数: 25
+Accuracy     : 0.8506
+Precision    : 0.5177
+Recall       : 0.7849
+F1 Score     : 0.6239
+AUPRC        : 0.7768
+
+各类GNN第1次运行结果
+🔧 Start training with model: SAGE
+Epoch 001 | Loss: 1.0499 | Val Acc: 0.1570 | Val F1: 0.2538 | Val AUPRC: 0.2382
+Epoch 010 | Loss: 0.5294 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1331
+Epoch 020 | Loss: 0.4472 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.5602
+Epoch 030 | Loss: 0.4038 | Val Acc: 0.9010 | Val F1: 0.5246 | Val AUPRC: 0.6018
+Epoch 040 | Loss: 0.3485 | Val Acc: 0.9061 | Val F1: 0.5600 | Val AUPRC: 0.6902
+Epoch 050 | Loss: 0.3061 | Val Acc: 0.9215 | Val F1: 0.6761 | Val AUPRC: 0.7664
+Epoch 060 | Loss: 0.2756 | Val Acc: 0.9215 | Val F1: 0.6761 | Val AUPRC: 0.8071
+Epoch 070 | Loss: 0.2518 | Val Acc: 0.9232 | Val F1: 0.6853 | Val AUPRC: 0.8189
+Epoch 080 | Loss: 0.2352 | Val Acc: 0.9249 | Val F1: 0.6944 | Val AUPRC: 0.8251
+Epoch 090 | Loss: 0.2215 | Val Acc: 0.9232 | Val F1: 0.6939 | Val AUPRC: 0.8262
+Epoch 100 | Loss: 0.2115 | Val Acc: 0.9232 | Val F1: 0.7020 | Val AUPRC: 0.8321
+
+===== 测试集指标 =====
+Accuracy    : 0.9321
+Precision   : 0.8088
+Recall      : 0.6707
+F1 Score    : 0.7333
+AUPRC       : 0.8221
+
+🔧 Start training with model: GAT
+Epoch 001 | Loss: 0.9043 | Val Acc: 0.1433 | Val F1: 0.2507 | Val AUPRC: 0.1226
+Epoch 010 | Loss: 0.5311 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0834
+Epoch 020 | Loss: 0.5215 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0910
+Epoch 030 | Loss: 0.4736 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1594
+Epoch 040 | Loss: 0.4432 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.5419
+Epoch 050 | Loss: 0.4032 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6668
+Epoch 060 | Loss: 0.3619 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6608
+Epoch 070 | Loss: 0.3275 | Val Acc: 0.9215 | Val F1: 0.6618 | Val AUPRC: 0.6859
+Epoch 080 | Loss: 0.3081 | Val Acc: 0.9198 | Val F1: 0.6667 | Val AUPRC: 0.6763
+Epoch 090 | Loss: 0.2984 | Val Acc: 0.9198 | Val F1: 0.6803 | Val AUPRC: 0.6680
+Epoch 100 | Loss: 0.2937 | Val Acc: 0.9198 | Val F1: 0.6803 | Val AUPRC: 0.6667
+
+===== 测试集指标 =====
+Accuracy    : 0.9236
+Precision   : 0.7937
+Recall      : 0.6098
+F1 Score    : 0.6897
+AUPRC       : 0.6908
+
+=== HGT ===
+
+🔧 Start training with model: HGT
+Epoch 001 | Loss: 0.7182 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0864
+Epoch 010 | Loss: 0.4438 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6635
+Epoch 020 | Loss: 0.2873 | Val Acc: 0.9181 | Val F1: 0.6667 | Val AUPRC: 0.6849
+Epoch 030 | Loss: 0.2697 | Val Acc: 0.9147 | Val F1: 0.6711 | Val AUPRC: 0.6900
+Epoch 040 | Loss: 0.2613 | Val Acc: 0.9181 | Val F1: 0.6800 | Val AUPRC: 0.6782
+Epoch 050 | Loss: 0.2585 | Val Acc: 0.9147 | Val F1: 0.6711 | Val AUPRC: 0.6977
+Epoch 060 | Loss: 0.2599 | Val Acc: 0.9232 | Val F1: 0.6939 | Val AUPRC: 0.7033
+Epoch 070 | Loss: 0.2503 | Val Acc: 0.9215 | Val F1: 0.6933 | Val AUPRC: 0.6926
+Epoch 080 | Loss: 0.2694 | Val Acc: 0.9232 | Val F1: 0.6939 | Val AUPRC: 0.6973
+Epoch 090 | Loss: 0.2649 | Val Acc: 0.9198 | Val F1: 0.6569 | Val AUPRC: 0.7026
+Epoch 100 | Loss: 0.2527 | Val Acc: 0.9215 | Val F1: 0.6892 | Val AUPRC: 0.6935
+Epoch 110 | Loss: 0.2372 | Val Acc: 0.9164 | Val F1: 0.6797 | Val AUPRC: 0.6998
+Epoch 120 | Loss: 0.2355 | Val Acc: 0.9232 | Val F1: 0.6939 | Val AUPRC: 0.6857
+Epoch 130 | Loss: 0.2320 | Val Acc: 0.9164 | Val F1: 0.6797 | Val AUPRC: 0.6965
+Epoch 140 | Loss: 0.2286 | Val Acc: 0.9130 | Val F1: 0.6710 | Val AUPRC: 0.6883
+Epoch 150 | Loss: 0.2252 | Val Acc: 0.9147 | Val F1: 0.6795 | Val AUPRC: 0.6801
+Epoch 160 | Loss: 0.2221 | Val Acc: 0.9147 | Val F1: 0.6795 | Val AUPRC: 0.6971
+Epoch 170 | Loss: 0.2195 | Val Acc: 0.9078 | Val F1: 0.6625 | Val AUPRC: 0.7036
+Epoch 180 | Loss: 0.2454 | Val Acc: 0.9078 | Val F1: 0.6538 | Val AUPRC: 0.6850
+Epoch 190 | Loss: 0.2433 | Val Acc: 0.9198 | Val F1: 0.6846 | Val AUPRC: 0.6767
+Epoch 200 | Loss: 0.2345 | Val Acc: 0.9215 | Val F1: 0.6892 | Val AUPRC: 0.6832
+
+===== 测试集指标 =====
+Accuracy    : 0.9168
+Precision   : 0.7538
+Recall      : 0.5976
+F1 Score    : 0.6667
+AUPRC       : 0.7140
+
+=== RGCN ===
+
+🔧 Start training with model: RGCN
+Epoch 001 | Loss: 2.6305 | Val Acc: 0.1433 | Val F1: 0.2507 | Val AUPRC: 0.2898
+Epoch 020 | Loss: 0.3986 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6560
+Epoch 040 | Loss: 0.3178 | Val Acc: 0.8942 | Val F1: 0.4918 | Val AUPRC: 0.7095
+Epoch 060 | Loss: 0.2501 | Val Acc: 0.9198 | Val F1: 0.6713 | Val AUPRC: 0.7932
+Epoch 080 | Loss: 0.2067 | Val Acc: 0.9249 | Val F1: 0.7105 | Val AUPRC: 0.7895
+Epoch 100 | Loss: 0.1793 | Val Acc: 0.9352 | Val F1: 0.7765 | Val AUPRC: 0.8149
+Epoch 120 | Loss: 0.1603 | Val Acc: 0.9352 | Val F1: 0.7841 | Val AUPRC: 0.8235
+Epoch 140 | Loss: 0.1469 | Val Acc: 0.9403 | Val F1: 0.8045 | Val AUPRC: 0.8253
+Epoch 160 | Loss: 0.1370 | Val Acc: 0.9420 | Val F1: 0.8111 | Val AUPRC: 0.8267
+Epoch 180 | Loss: 0.1288 | Val Acc: 0.9437 | Val F1: 0.8156 | Val AUPRC: 0.8322
+Epoch 200 | Loss: 0.1223 | Val Acc: 0.9488 | Val F1: 0.8333 | Val AUPRC: 0.8367
+
+===== 测试集指标 =====
+Accuracy    : 0.9338
+Precision   : 0.7048
+Recall      : 0.9024
+F1 Score    : 0.7914
+AUPRC       : 0.8186
+
+=== MAGNN ===
+
+🔧 Start training with model: MAGNN
+Epoch 001 | Loss: 0.7822 | Val Acc: 0.1536 | Val F1: 0.2508 | Val AUPRC: 0.1494
+Epoch 010 | Loss: 0.6110 | Val Acc: 0.8089 | Val F1: 0.0000 | Val AUPRC: 0.1206
+Epoch 020 | Loss: 0.5273 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1191
+Epoch 030 | Loss: 0.5002 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1332
+Epoch 040 | Loss: 0.4843 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1571
+Epoch 050 | Loss: 0.4669 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1982
+Epoch 060 | Loss: 0.4498 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.2826
+Epoch 070 | Loss: 0.4334 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.4621
+Epoch 080 | Loss: 0.4172 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6017
+Epoch 090 | Loss: 0.4015 | Val Acc: 0.8788 | Val F1: 0.3486 | Val AUPRC: 0.6129
+Epoch 100 | Loss: 0.3867 | Val Acc: 0.9147 | Val F1: 0.6212 | Val AUPRC: 0.5913
+
+===== 测试集指标 =====
+Accuracy    : 0.9270
+Precision   : 0.8980
+Recall      : 0.5366
+F1 Score    : 0.6718
+AUPRC       : 0.6474
+
+
+
+各类GNN第2次运行结果
+🔧 Start training with model: SAGE
+Epoch 001 | Loss: 1.0279 | Val Acc: 0.1433 | Val F1: 0.2507 | Val AUPRC: 0.0819
+Epoch 010 | Loss: 0.5774 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0797
+Epoch 020 | Loss: 0.4773 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1585
+Epoch 030 | Loss: 0.4231 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.7335
+Epoch 040 | Loss: 0.3576 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.8164
+Epoch 050 | Loss: 0.3013 | Val Acc: 0.9215 | Val F1: 0.6761 | Val AUPRC: 0.8316
+Epoch 060 | Loss: 0.2582 | Val Acc: 0.9215 | Val F1: 0.6761 | Val AUPRC: 0.8307
+Epoch 070 | Loss: 0.2301 | Val Acc: 0.9215 | Val F1: 0.6849 | Val AUPRC: 0.8286
+Epoch 080 | Loss: 0.2118 | Val Acc: 0.9317 | Val F1: 0.7436 | Val AUPRC: 0.8353
+Epoch 090 | Loss: 0.1976 | Val Acc: 0.9369 | Val F1: 0.7730 | Val AUPRC: 0.8381
+Epoch 100 | Loss: 0.1857 | Val Acc: 0.9573 | Val F1: 0.8603 | Val AUPRC: 0.8382
+
+===== 测试集指标 =====
+Accuracy    : 0.9491
+Precision   : 0.7889
+Recall      : 0.8659
+F1 Score    : 0.8256
+AUPRC       : 0.8452
+
+🔧 Start training with model: GAT
+Epoch 001 | Loss: 1.2574 | Val Acc: 0.1433 | Val F1: 0.2507 | Val AUPRC: 0.1741
+Epoch 010 | Loss: 0.5926 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0843
+Epoch 020 | Loss: 0.5131 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0963
+Epoch 030 | Loss: 0.4983 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1112
+Epoch 040 | Loss: 0.4610 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.4856
+Epoch 050 | Loss: 0.4396 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.5767
+Epoch 060 | Loss: 0.4115 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6228
+Epoch 070 | Loss: 0.3828 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6314
+Epoch 080 | Loss: 0.3537 | Val Acc: 0.9130 | Val F1: 0.6107 | Val AUPRC: 0.6588
+Epoch 090 | Loss: 0.3307 | Val Acc: 0.9215 | Val F1: 0.6618 | Val AUPRC: 0.6660
+Epoch 100 | Loss: 0.3137 | Val Acc: 0.9215 | Val F1: 0.6761 | Val AUPRC: 0.6860
+
+===== 测试集指标 =====
+Accuracy    : 0.9236
+Precision   : 0.8136
+Recall      : 0.5854
+F1 Score    : 0.6809
+AUPRC       : 0.7021
+
+=== HGT ===
+
+🔧 Start training with model: HGT
+Epoch 001 | Loss: 0.7008 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0856
+Epoch 010 | Loss: 0.4632 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6584
+Epoch 020 | Loss: 0.3132 | Val Acc: 0.9215 | Val F1: 0.6974 | Val AUPRC: 0.7021
+Epoch 030 | Loss: 0.2760 | Val Acc: 0.9164 | Val F1: 0.6797 | Val AUPRC: 0.6926
+Epoch 040 | Loss: 0.2651 | Val Acc: 0.9147 | Val F1: 0.6753 | Val AUPRC: 0.6857
+Epoch 050 | Loss: 0.2569 | Val Acc: 0.9198 | Val F1: 0.6803 | Val AUPRC: 0.6793
+Epoch 060 | Loss: 0.2472 | Val Acc: 0.9232 | Val F1: 0.6897 | Val AUPRC: 0.7000
+Epoch 070 | Loss: 0.2426 | Val Acc: 0.9215 | Val F1: 0.6849 | Val AUPRC: 0.7045
+Epoch 080 | Loss: 0.2403 | Val Acc: 0.9181 | Val F1: 0.6883 | Val AUPRC: 0.6986
+Epoch 090 | Loss: 0.2356 | Val Acc: 0.9164 | Val F1: 0.6839 | Val AUPRC: 0.7108
+Epoch 100 | Loss: 0.2342 | Val Acc: 0.9198 | Val F1: 0.6667 | Val AUPRC: 0.6684
+Epoch 110 | Loss: 0.2342 | Val Acc: 0.9198 | Val F1: 0.6846 | Val AUPRC: 0.6709
+Epoch 120 | Loss: 0.2463 | Val Acc: 0.9215 | Val F1: 0.6974 | Val AUPRC: 0.7000
+Epoch 130 | Loss: 0.2461 | Val Acc: 0.9232 | Val F1: 0.7020 | Val AUPRC: 0.6919
+Epoch 140 | Loss: 0.2343 | Val Acc: 0.9147 | Val F1: 0.6753 | Val AUPRC: 0.6811
+Epoch 150 | Loss: 0.2292 | Val Acc: 0.9113 | Val F1: 0.6623 | Val AUPRC: 0.6474
+Epoch 160 | Loss: 0.2317 | Val Acc: 0.9164 | Val F1: 0.6839 | Val AUPRC: 0.6637
+Epoch 170 | Loss: 0.2232 | Val Acc: 0.9096 | Val F1: 0.6581 | Val AUPRC: 0.6497
+Epoch 180 | Loss: 0.2185 | Val Acc: 0.9096 | Val F1: 0.6536 | Val AUPRC: 0.6356
+Epoch 190 | Loss: 0.2139 | Val Acc: 0.9061 | Val F1: 0.6497 | Val AUPRC: 0.6513
+Epoch 200 | Loss: 0.2383 | Val Acc: 0.9147 | Val F1: 0.6795 | Val AUPRC: 0.6317
+
+===== 测试集指标 =====
+Accuracy    : 0.9219
+Precision   : 0.7500
+Recall      : 0.6585
+F1 Score    : 0.7013
+AUPRC       : 0.6614
+
+=== RGCN ===
+
+🔧 Start training with model: RGCN
+Epoch 001 | Loss: 1.3827 | Val Acc: 0.3515 | Val F1: 0.3066 | Val AUPRC: 0.6022
+Epoch 020 | Loss: 0.3481 | Val Acc: 0.9130 | Val F1: 0.6667 | Val AUPRC: 0.7100
+Epoch 040 | Loss: 0.2596 | Val Acc: 0.9215 | Val F1: 0.6974 | Val AUPRC: 0.7532
+Epoch 060 | Loss: 0.2234 | Val Acc: 0.9198 | Val F1: 0.7044 | Val AUPRC: 0.7805
+Epoch 080 | Loss: 0.2005 | Val Acc: 0.9232 | Val F1: 0.7205 | Val AUPRC: 0.7570
+Epoch 100 | Loss: 0.1808 | Val Acc: 0.9352 | Val F1: 0.7791 | Val AUPRC: 0.7493
+Epoch 120 | Loss: 0.1633 | Val Acc: 0.9420 | Val F1: 0.8090 | Val AUPRC: 0.7548
+Epoch 140 | Loss: 0.1497 | Val Acc: 0.9454 | Val F1: 0.8222 | Val AUPRC: 0.7517
+Epoch 160 | Loss: 0.1389 | Val Acc: 0.9471 | Val F1: 0.8268 | Val AUPRC: 0.7530
+Epoch 180 | Loss: 0.1308 | Val Acc: 0.9488 | Val F1: 0.8333 | Val AUPRC: 0.7642
+Epoch 200 | Loss: 0.1242 | Val Acc: 0.9505 | Val F1: 0.8380 | Val AUPRC: 0.7697
+
+===== 测试集指标 =====
+Accuracy    : 0.9372
+Precision   : 0.7184
+Recall      : 0.9024
+F1 Score    : 0.8000
+AUPRC       : 0.7970
+
+=== MAGNN ===
+
+🔧 Start training with model: MAGNN
+Epoch 001 | Loss: 0.6461 | Val Acc: 0.9215 | Val F1: 0.6892 | Val AUPRC: 0.6195
+Epoch 010 | Loss: 0.5135 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1937
+Epoch 020 | Loss: 0.4781 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1607
+Epoch 030 | Loss: 0.4653 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1918
+Epoch 040 | Loss: 0.4455 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.3033
+Epoch 050 | Loss: 0.4266 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.5423
+Epoch 060 | Loss: 0.4073 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6199
+Epoch 070 | Loss: 0.3882 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.5890
+Epoch 080 | Loss: 0.3701 | Val Acc: 0.9113 | Val F1: 0.6000 | Val AUPRC: 0.6165
+Epoch 090 | Loss: 0.3535 | Val Acc: 0.9147 | Val F1: 0.6269 | Val AUPRC: 0.6278
+Epoch 100 | Loss: 0.3406 | Val Acc: 0.9147 | Val F1: 0.6324 | Val AUPRC: 0.6479
+
+===== 测试集指标 =====
+Accuracy    : 0.9270
+Precision   : 0.8679
+Recall      : 0.5610
+F1 Score    : 0.6815
+AUPRC       : 0.6816
+
+
+各类GNN第3次运行结果
+
+🔧 Start training with model: SAGE
+Epoch 001 | Loss: 0.6333 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1312
+Epoch 010 | Loss: 0.4736 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.4847
+Epoch 020 | Loss: 0.3907 | Val Acc: 0.9130 | Val F1: 0.6047 | Val AUPRC: 0.6704
+Epoch 030 | Loss: 0.3261 | Val Acc: 0.9181 | Val F1: 0.6522 | Val AUPRC: 0.7275
+Epoch 040 | Loss: 0.2801 | Val Acc: 0.9215 | Val F1: 0.6761 | Val AUPRC: 0.7535
+Epoch 050 | Loss: 0.2517 | Val Acc: 0.9198 | Val F1: 0.6803 | Val AUPRC: 0.7774
+Epoch 060 | Loss: 0.2334 | Val Acc: 0.9181 | Val F1: 0.6757 | Val AUPRC: 0.7914
+Epoch 070 | Loss: 0.2189 | Val Acc: 0.9215 | Val F1: 0.6974 | Val AUPRC: 0.8117
+Epoch 080 | Loss: 0.2046 | Val Acc: 0.9317 | Val F1: 0.7500 | Val AUPRC: 0.7980
+Epoch 090 | Loss: 0.1907 | Val Acc: 0.9352 | Val F1: 0.7683 | Val AUPRC: 0.7779
+Epoch 100 | Loss: 0.1789 | Val Acc: 0.9573 | Val F1: 0.8603 | Val AUPRC: 0.7837
+
+===== 测试集指标 =====
+Accuracy    : 0.9491
+Precision   : 0.7955
+Recall      : 0.8537
+F1 Score    : 0.8235
+AUPRC       : 0.8119
+
+🔧 Start training with model: GAT
+Epoch 001 | Loss: 1.0904 | Val Acc: 0.1433 | Val F1: 0.2507 | Val AUPRC: 0.6038
+Epoch 010 | Loss: 0.5098 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.2272
+Epoch 020 | Loss: 0.4956 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1747
+Epoch 030 | Loss: 0.4560 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.4562
+Epoch 040 | Loss: 0.4238 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.5622
+Epoch 050 | Loss: 0.3913 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6580
+Epoch 060 | Loss: 0.3608 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6663
+Epoch 070 | Loss: 0.3302 | Val Acc: 0.9232 | Val F1: 0.6809 | Val AUPRC: 0.6770
+Epoch 080 | Loss: 0.3085 | Val Acc: 0.9215 | Val F1: 0.6806 | Val AUPRC: 0.6992
+Epoch 090 | Loss: 0.2969 | Val Acc: 0.9215 | Val F1: 0.6806 | Val AUPRC: 0.6809
+Epoch 100 | Loss: 0.2927 | Val Acc: 0.9215 | Val F1: 0.6806 | Val AUPRC: 0.6736
+
+===== 测试集指标 =====
+Accuracy    : 0.9287
+Precision   : 0.8333
+Recall      : 0.6098
+F1 Score    : 0.7042
+AUPRC       : 0.7068
+
+=== HGT ===
+
+🔧 Start training with model: HGT
+Epoch 001 | Loss: 0.6946 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0842
+Epoch 010 | Loss: 0.4524 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6735
+Epoch 020 | Loss: 0.3140 | Val Acc: 0.9181 | Val F1: 0.6800 | Val AUPRC: 0.7050
+Epoch 030 | Loss: 0.2725 | Val Acc: 0.9198 | Val F1: 0.6846 | Val AUPRC: 0.6846
+Epoch 040 | Loss: 0.2612 | Val Acc: 0.9198 | Val F1: 0.6846 | Val AUPRC: 0.6780
+Epoch 050 | Loss: 0.2545 | Val Acc: 0.9215 | Val F1: 0.6892 | Val AUPRC: 0.7035
+Epoch 060 | Loss: 0.2497 | Val Acc: 0.9164 | Val F1: 0.6711 | Val AUPRC: 0.6713
+Epoch 070 | Loss: 0.2657 | Val Acc: 0.9215 | Val F1: 0.6806 | Val AUPRC: 0.6815
+Epoch 080 | Loss: 0.2490 | Val Acc: 0.9113 | Val F1: 0.6667 | Val AUPRC: 0.6893
+Epoch 090 | Loss: 0.2427 | Val Acc: 0.9113 | Val F1: 0.6667 | Val AUPRC: 0.6791
+Epoch 100 | Loss: 0.2438 | Val Acc: 0.9130 | Val F1: 0.6752 | Val AUPRC: 0.6721
+Epoch 110 | Loss: 0.2432 | Val Acc: 0.9078 | Val F1: 0.6625 | Val AUPRC: 0.6843
+Epoch 120 | Loss: 0.2371 | Val Acc: 0.9164 | Val F1: 0.6839 | Val AUPRC: 0.6962
+Epoch 130 | Loss: 0.2336 | Val Acc: 0.9164 | Val F1: 0.6839 | Val AUPRC: 0.6861
+Epoch 140 | Loss: 0.2317 | Val Acc: 0.9198 | Val F1: 0.6928 | Val AUPRC: 0.7052
+Epoch 150 | Loss: 0.2311 | Val Acc: 0.9198 | Val F1: 0.6928 | Val AUPRC: 0.7057
+Epoch 160 | Loss: 0.2316 | Val Acc: 0.9130 | Val F1: 0.6752 | Val AUPRC: 0.7120
+Epoch 170 | Loss: 0.2306 | Val Acc: 0.9147 | Val F1: 0.6795 | Val AUPRC: 0.7195
+Epoch 180 | Loss: 0.2409 | Val Acc: 0.9130 | Val F1: 0.6752 | Val AUPRC: 0.7032
+Epoch 190 | Loss: 0.2442 | Val Acc: 0.9147 | Val F1: 0.6753 | Val AUPRC: 0.6762
+Epoch 200 | Loss: 0.2376 | Val Acc: 0.9147 | Val F1: 0.6795 | Val AUPRC: 0.6910
+
+===== 测试集指标 =====
+Accuracy    : 0.9083
+Precision   : 0.6628
+Recall      : 0.6951
+F1 Score    : 0.6786
+AUPRC       : 0.6961
+
+=== RGCN ===
+
+🔧 Start training with model: RGCN
+Epoch 001 | Loss: 0.5584 | Val Acc: 0.8549 | Val F1: 0.0000 | Val AUPRC: 0.1151
+Epoch 020 | Loss: 0.2751 | Val Acc: 0.9010 | Val F1: 0.5397 | Val AUPRC: 0.7686
+Epoch 040 | Loss: 0.2165 | Val Acc: 0.9266 | Val F1: 0.7226 | Val AUPRC: 0.8255
+Epoch 060 | Loss: 0.1793 | Val Acc: 0.9369 | Val F1: 0.7861 | Val AUPRC: 0.8015
+Epoch 080 | Loss: 0.1522 | Val Acc: 0.9488 | Val F1: 0.8333 | Val AUPRC: 0.7949
+Epoch 100 | Loss: 0.1345 | Val Acc: 0.9488 | Val F1: 0.8333 | Val AUPRC: 0.7848
+Epoch 120 | Loss: 0.1229 | Val Acc: 0.9539 | Val F1: 0.8508 | Val AUPRC: 0.7857
+Epoch 140 | Loss: 0.1152 | Val Acc: 0.9522 | Val F1: 0.8478 | Val AUPRC: 0.7965
+Epoch 160 | Loss: 0.1096 | Val Acc: 0.9522 | Val F1: 0.8478 | Val AUPRC: 0.8048
+Epoch 180 | Loss: 0.1049 | Val Acc: 0.9488 | Val F1: 0.8387 | Val AUPRC: 0.8130
+Epoch 200 | Loss: 0.1009 | Val Acc: 0.9488 | Val F1: 0.8387 | Val AUPRC: 0.8102
+
+===== 测试集指标 =====
+Accuracy    : 0.9423
+Precision   : 0.7353
+Recall      : 0.9146
+F1 Score    : 0.8152
+AUPRC       : 0.8283
+
+=== MAGNN ===
+
+🔧 Start training with model: MAGNN
+Epoch 001 | Loss: 0.6755 | Val Acc: 0.8549 | Val F1: 0.0000 | Val AUPRC: 0.0811
+Epoch 010 | Loss: 0.5479 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0849
+Epoch 020 | Loss: 0.5284 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0883
+Epoch 030 | Loss: 0.5107 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0979
+Epoch 040 | Loss: 0.4887 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1436
+Epoch 050 | Loss: 0.4693 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.2092
+Epoch 060 | Loss: 0.4480 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.2797
+Epoch 070 | Loss: 0.4264 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.4330
+Epoch 080 | Loss: 0.4043 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6281
+Epoch 090 | Loss: 0.3827 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6048
+Epoch 100 | Loss: 0.3636 | Val Acc: 0.9130 | Val F1: 0.6107 | Val AUPRC: 0.6410
+
+===== 测试集指标 =====
+Accuracy    : 0.9253
+Precision   : 0.8958
+Recall      : 0.5244
+F1 Score    : 0.6615
+AUPRC       : 0.6633
+
+
+
+各类GNN第4次运行结果
+🔧 Start training with model: SAGE
+Epoch 001 | Loss: 0.8155 | Val Acc: 0.5717 | Val F1: 0.3085 | Val AUPRC: 0.5294
+Epoch 010 | Loss: 0.5046 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1774
+Epoch 020 | Loss: 0.4228 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.5580
+Epoch 030 | Loss: 0.3780 | Val Acc: 0.9181 | Val F1: 0.6471 | Val AUPRC: 0.7100
+Epoch 040 | Loss: 0.3275 | Val Acc: 0.9198 | Val F1: 0.6569 | Val AUPRC: 0.7452
+Epoch 050 | Loss: 0.2872 | Val Acc: 0.9215 | Val F1: 0.6761 | Val AUPRC: 0.7699
+Epoch 060 | Loss: 0.2633 | Val Acc: 0.9215 | Val F1: 0.6761 | Val AUPRC: 0.7799
+Epoch 070 | Loss: 0.2490 | Val Acc: 0.9181 | Val F1: 0.6757 | Val AUPRC: 0.7895
+Epoch 080 | Loss: 0.2368 | Val Acc: 0.9198 | Val F1: 0.6846 | Val AUPRC: 0.7967
+Epoch 090 | Loss: 0.2235 | Val Acc: 0.9198 | Val F1: 0.6846 | Val AUPRC: 0.8221
+Epoch 100 | Loss: 0.2085 | Val Acc: 0.9266 | Val F1: 0.7296 | Val AUPRC: 0.8226
+
+===== 测试集指标 =====
+Accuracy    : 0.9389
+Precision   : 0.8026
+Recall      : 0.7439
+F1 Score    : 0.7722
+AUPRC       : 0.8286
+
+🔧 Start training with model: GAT
+Epoch 001 | Loss: 0.6997 | Val Acc: 0.9181 | Val F1: 0.6522 | Val AUPRC: 0.5850
+Epoch 010 | Loss: 0.4828 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1806
+Epoch 020 | Loss: 0.4656 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.4744
+Epoch 030 | Loss: 0.4248 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.5539
+Epoch 040 | Loss: 0.3879 | Val Acc: 0.8857 | Val F1: 0.3853 | Val AUPRC: 0.6231
+Epoch 050 | Loss: 0.3512 | Val Acc: 0.9130 | Val F1: 0.6165 | Val AUPRC: 0.6826
+Epoch 060 | Loss: 0.3215 | Val Acc: 0.9164 | Val F1: 0.6423 | Val AUPRC: 0.6711
+Epoch 070 | Loss: 0.3016 | Val Acc: 0.9198 | Val F1: 0.6619 | Val AUPRC: 0.6842
+Epoch 080 | Loss: 0.2930 | Val Acc: 0.9249 | Val F1: 0.6944 | Val AUPRC: 0.7167
+Epoch 090 | Loss: 0.2886 | Val Acc: 0.9249 | Val F1: 0.6986 | Val AUPRC: 0.7010
+Epoch 100 | Loss: 0.2855 | Val Acc: 0.9232 | Val F1: 0.6939 | Val AUPRC: 0.6814
+
+===== 测试集指标 =====
+Accuracy    : 0.9236
+Precision   : 0.8033
+Recall      : 0.5976
+F1 Score    : 0.6853
+AUPRC       : 0.7150
+
+=== HGT ===
+
+🔧 Start training with model: HGT
+Epoch 001 | Loss: 0.7055 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1071
+Epoch 010 | Loss: 0.4570 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6728
+Epoch 020 | Loss: 0.3131 | Val Acc: 0.9096 | Val F1: 0.6624 | Val AUPRC: 0.6850
+Epoch 030 | Loss: 0.2744 | Val Acc: 0.9215 | Val F1: 0.6892 | Val AUPRC: 0.7113
+Epoch 040 | Loss: 0.2645 | Val Acc: 0.9232 | Val F1: 0.6939 | Val AUPRC: 0.6975
+Epoch 050 | Loss: 0.2598 | Val Acc: 0.9181 | Val F1: 0.6842 | Val AUPRC: 0.6878
+Epoch 060 | Loss: 0.2557 | Val Acc: 0.9181 | Val F1: 0.6842 | Val AUPRC: 0.6925
+Epoch 070 | Loss: 0.2510 | Val Acc: 0.9181 | Val F1: 0.6842 | Val AUPRC: 0.6842
+Epoch 080 | Loss: 0.2471 | Val Acc: 0.9232 | Val F1: 0.6897 | Val AUPRC: 0.6854
+Epoch 090 | Loss: 0.2432 | Val Acc: 0.9198 | Val F1: 0.6803 | Val AUPRC: 0.6817
+Epoch 100 | Loss: 0.2390 | Val Acc: 0.9096 | Val F1: 0.6490 | Val AUPRC: 0.6883
+Epoch 110 | Loss: 0.2356 | Val Acc: 0.9130 | Val F1: 0.6483 | Val AUPRC: 0.6973
+Epoch 120 | Loss: 0.2404 | Val Acc: 0.9181 | Val F1: 0.6620 | Val AUPRC: 0.7353
+Epoch 130 | Loss: 0.2433 | Val Acc: 0.9198 | Val F1: 0.6846 | Val AUPRC: 0.7308
+Epoch 140 | Loss: 0.2364 | Val Acc: 0.9181 | Val F1: 0.6757 | Val AUPRC: 0.7297
+Epoch 150 | Loss: 0.2335 | Val Acc: 0.9164 | Val F1: 0.6667 | Val AUPRC: 0.7364
+Epoch 160 | Loss: 0.2311 | Val Acc: 0.9181 | Val F1: 0.6757 | Val AUPRC: 0.7282
+Epoch 170 | Loss: 0.2288 | Val Acc: 0.9147 | Val F1: 0.6753 | Val AUPRC: 0.7222
+Epoch 180 | Loss: 0.2261 | Val Acc: 0.9078 | Val F1: 0.6582 | Val AUPRC: 0.7254
+Epoch 190 | Loss: 0.2227 | Val Acc: 0.9113 | Val F1: 0.6579 | Val AUPRC: 0.7186
+Epoch 200 | Loss: 0.2357 | Val Acc: 0.9164 | Val F1: 0.6839 | Val AUPRC: 0.7143
+
+===== 测试集指标 =====
+Accuracy    : 0.9100
+Precision   : 0.6883
+Recall      : 0.6463
+F1 Score    : 0.6667
+AUPRC       : 0.7135
+
+=== RGCN ===
+
+🔧 Start training with model: RGCN
+Epoch 001 | Loss: 0.5076 | Val Acc: 0.8720 | Val F1: 0.2574 | Val AUPRC: 0.4264
+Epoch 020 | Loss: 0.2608 | Val Acc: 0.9215 | Val F1: 0.6933 | Val AUPRC: 0.7563
+Epoch 040 | Loss: 0.2001 | Val Acc: 0.9266 | Val F1: 0.7456 | Val AUPRC: 0.8006
+Epoch 060 | Loss: 0.1601 | Val Acc: 0.9420 | Val F1: 0.8111 | Val AUPRC: 0.7720
+Epoch 080 | Loss: 0.1355 | Val Acc: 0.9471 | Val F1: 0.8268 | Val AUPRC: 0.7680
+Epoch 100 | Loss: 0.1226 | Val Acc: 0.9505 | Val F1: 0.8398 | Val AUPRC: 0.7767
+Epoch 120 | Loss: 0.1147 | Val Acc: 0.9471 | Val F1: 0.8268 | Val AUPRC: 0.7870
+Epoch 140 | Loss: 0.1095 | Val Acc: 0.9471 | Val F1: 0.8249 | Val AUPRC: 0.7912
+Epoch 160 | Loss: 0.1042 | Val Acc: 0.9488 | Val F1: 0.8315 | Val AUPRC: 0.7970
+Epoch 180 | Loss: 0.1003 | Val Acc: 0.9471 | Val F1: 0.8268 | Val AUPRC: 0.8004
+Epoch 200 | Loss: 0.0968 | Val Acc: 0.9505 | Val F1: 0.8380 | Val AUPRC: 0.8041
+
+===== 测试集指标 =====
+Accuracy    : 0.9406
+Precision   : 0.7327
+Recall      : 0.9024
+F1 Score    : 0.8087
+AUPRC       : 0.8105
+
+=== MAGNN ===
+
+🔧 Start training with model: MAGNN
+Epoch 001 | Loss: 0.5376 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1073
+Epoch 010 | Loss: 0.4968 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1065
+Epoch 020 | Loss: 0.4786 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1508
+Epoch 030 | Loss: 0.4576 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.2769
+Epoch 040 | Loss: 0.4367 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.4346
+Epoch 050 | Loss: 0.4160 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6229
+Epoch 060 | Loss: 0.3956 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.5971
+Epoch 070 | Loss: 0.3769 | Val Acc: 0.9096 | Val F1: 0.5891 | Val AUPRC: 0.6313
+Epoch 080 | Loss: 0.3603 | Val Acc: 0.9147 | Val F1: 0.6269 | Val AUPRC: 0.6461
+Epoch 090 | Loss: 0.3455 | Val Acc: 0.9147 | Val F1: 0.6324 | Val AUPRC: 0.6526
+Epoch 100 | Loss: 0.3326 | Val Acc: 0.9181 | Val F1: 0.6522 | Val AUPRC: 0.6699
+
+===== 测试集指标 =====
+Accuracy    : 0.9287
+Precision   : 0.8846
+Recall      : 0.5610
+F1 Score    : 0.6866
+AUPRC       : 0.6908
+
+
+各类GNN第5次运行结果
+
+🔧 Start training with model: SAGE
+Epoch 001 | Loss: 0.7946 | Val Acc: 0.6246 | Val F1: 0.3956 | Val AUPRC: 0.4372
+Epoch 010 | Loss: 0.5071 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1416
+Epoch 020 | Loss: 0.4225 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.5949
+Epoch 030 | Loss: 0.3745 | Val Acc: 0.9078 | Val F1: 0.5645 | Val AUPRC: 0.6623
+Epoch 040 | Loss: 0.3221 | Val Acc: 0.9181 | Val F1: 0.6522 | Val AUPRC: 0.7101
+Epoch 050 | Loss: 0.2786 | Val Acc: 0.9215 | Val F1: 0.6761 | Val AUPRC: 0.7739
+Epoch 060 | Loss: 0.2477 | Val Acc: 0.9232 | Val F1: 0.6853 | Val AUPRC: 0.8177
+Epoch 070 | Loss: 0.2282 | Val Acc: 0.9334 | Val F1: 0.7417 | Val AUPRC: 0.8174
+Epoch 080 | Loss: 0.2153 | Val Acc: 0.9300 | Val F1: 0.7355 | Val AUPRC: 0.7860
+Epoch 090 | Loss: 0.2043 | Val Acc: 0.9300 | Val F1: 0.7389 | Val AUPRC: 0.7962
+Epoch 100 | Loss: 0.1929 | Val Acc: 0.9403 | Val F1: 0.7879 | Val AUPRC: 0.7862
+
+===== 测试集指标 =====
+Accuracy    : 0.9423
+Precision   : 0.8077
+Recall      : 0.7683
+F1 Score    : 0.7875
+AUPRC       : 0.8102
+
+🔧 Start training with model: GAT
+Epoch 001 | Loss: 0.6076 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0849
+Epoch 010 | Loss: 0.4726 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1682
+Epoch 020 | Loss: 0.4267 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.5961
+Epoch 030 | Loss: 0.3815 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6578
+Epoch 040 | Loss: 0.3432 | Val Acc: 0.9027 | Val F1: 0.5366 | Val AUPRC: 0.6595
+Epoch 050 | Loss: 0.3163 | Val Acc: 0.9232 | Val F1: 0.6763 | Val AUPRC: 0.6668
+Epoch 060 | Loss: 0.3014 | Val Acc: 0.9198 | Val F1: 0.6667 | Val AUPRC: 0.6827
+Epoch 070 | Loss: 0.2939 | Val Acc: 0.9198 | Val F1: 0.6846 | Val AUPRC: 0.6694
+Epoch 080 | Loss: 0.2889 | Val Acc: 0.9215 | Val F1: 0.6892 | Val AUPRC: 0.6750
+Epoch 090 | Loss: 0.2859 | Val Acc: 0.9215 | Val F1: 0.6892 | Val AUPRC: 0.6976
+Epoch 100 | Loss: 0.2833 | Val Acc: 0.9215 | Val F1: 0.6892 | Val AUPRC: 0.6848
+
+===== 测试集指标 =====
+Accuracy    : 0.9270
+Precision   : 0.8197
+Recall      : 0.6098
+F1 Score    : 0.6993
+AUPRC       : 0.7342
+
+=== HGT ===
+
+🔧 Start training with model: HGT
+Epoch 001 | Loss: 0.7258 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1029
+Epoch 010 | Loss: 0.4647 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.5591
+Epoch 020 | Loss: 0.3724 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6987
+Epoch 030 | Loss: 0.2859 | Val Acc: 0.9198 | Val F1: 0.6846 | Val AUPRC: 0.6834
+Epoch 040 | Loss: 0.2629 | Val Acc: 0.9181 | Val F1: 0.6842 | Val AUPRC: 0.6730
+Epoch 050 | Loss: 0.2536 | Val Acc: 0.9164 | Val F1: 0.6755 | Val AUPRC: 0.6797
+Epoch 060 | Loss: 0.2483 | Val Acc: 0.9078 | Val F1: 0.6625 | Val AUPRC: 0.6887
+Epoch 070 | Loss: 0.2441 | Val Acc: 0.9215 | Val F1: 0.6849 | Val AUPRC: 0.7228
+Epoch 080 | Loss: 0.2410 | Val Acc: 0.9198 | Val F1: 0.6803 | Val AUPRC: 0.6849
+Epoch 090 | Loss: 0.2381 | Val Acc: 0.9181 | Val F1: 0.6757 | Val AUPRC: 0.6916
+Epoch 100 | Loss: 0.2349 | Val Acc: 0.9198 | Val F1: 0.6928 | Val AUPRC: 0.7004
+Epoch 110 | Loss: 0.2328 | Val Acc: 0.9164 | Val F1: 0.6839 | Val AUPRC: 0.6838
+Epoch 120 | Loss: 0.2311 | Val Acc: 0.9130 | Val F1: 0.6752 | Val AUPRC: 0.6917
+Epoch 130 | Loss: 0.2603 | Val Acc: 0.9130 | Val F1: 0.6792 | Val AUPRC: 0.6954
+Epoch 140 | Loss: 0.2357 | Val Acc: 0.9147 | Val F1: 0.6711 | Val AUPRC: 0.7066
+Epoch 150 | Loss: 0.2302 | Val Acc: 0.9198 | Val F1: 0.6928 | Val AUPRC: 0.6979
+Epoch 160 | Loss: 0.2263 | Val Acc: 0.9198 | Val F1: 0.6928 | Val AUPRC: 0.6912
+Epoch 170 | Loss: 0.2229 | Val Acc: 0.9181 | Val F1: 0.6883 | Val AUPRC: 0.7045
+Epoch 180 | Loss: 0.2211 | Val Acc: 0.9078 | Val F1: 0.6625 | Val AUPRC: 0.7130
+Epoch 190 | Loss: 0.2214 | Val Acc: 0.9113 | Val F1: 0.6709 | Val AUPRC: 0.6992
+Epoch 200 | Loss: 0.2243 | Val Acc: 0.9215 | Val F1: 0.6933 | Val AUPRC: 0.7101
+
+===== 测试集指标 =====
+Accuracy    : 0.9236
+Precision   : 0.7606
+Recall      : 0.6585
+F1 Score    : 0.7059
+AUPRC       : 0.7189
+
+=== RGCN ===
+
+🔧 Start training with model: RGCN
+Epoch 001 | Loss: 1.1206 | Val Acc: 0.5410 | Val F1: 0.2710 | Val AUPRC: 0.1457
+Epoch 020 | Loss: 0.3690 | Val Acc: 0.8805 | Val F1: 0.4167 | Val AUPRC: 0.6851
+Epoch 040 | Loss: 0.2595 | Val Acc: 0.9232 | Val F1: 0.6939 | Val AUPRC: 0.7649
+Epoch 060 | Loss: 0.2173 | Val Acc: 0.9215 | Val F1: 0.7013 | Val AUPRC: 0.8048
+Epoch 080 | Loss: 0.1936 | Val Acc: 0.9232 | Val F1: 0.7305 | Val AUPRC: 0.7838
+Epoch 100 | Loss: 0.1758 | Val Acc: 0.9283 | Val F1: 0.7500 | Val AUPRC: 0.7822
+Epoch 120 | Loss: 0.1610 | Val Acc: 0.9369 | Val F1: 0.7861 | Val AUPRC: 0.7783
+Epoch 140 | Loss: 0.1487 | Val Acc: 0.9437 | Val F1: 0.8136 | Val AUPRC: 0.7732
+Epoch 160 | Loss: 0.1389 | Val Acc: 0.9454 | Val F1: 0.8222 | Val AUPRC: 0.7781
+Epoch 180 | Loss: 0.1310 | Val Acc: 0.9522 | Val F1: 0.8444 | Val AUPRC: 0.7843
+Epoch 200 | Loss: 0.1246 | Val Acc: 0.9488 | Val F1: 0.8352 | Val AUPRC: 0.7913
+
+===== 测试集指标 =====
+Accuracy    : 0.9355
+Precision   : 0.7200
+Recall      : 0.8780
+F1 Score    : 0.7912
+AUPRC       : 0.8211
+
+=== MAGNN ===
+
+🔧 Start training with model: MAGNN
+Epoch 001 | Loss: 0.5727 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0848
+Epoch 010 | Loss: 0.5403 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0859
+Epoch 020 | Loss: 0.5190 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.0893
+Epoch 030 | Loss: 0.4966 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1088
+Epoch 040 | Loss: 0.4748 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.1712
+Epoch 050 | Loss: 0.4532 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.2482
+Epoch 060 | Loss: 0.4321 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.3901
+Epoch 070 | Loss: 0.4117 | Val Acc: 0.8567 | Val F1: 0.0000 | Val AUPRC: 0.6062
+Epoch 080 | Loss: 0.3918 | Val Acc: 0.8567 | Val F1: 0.0233 | Val AUPRC: 0.5953
+Epoch 090 | Loss: 0.3733 | Val Acc: 0.9130 | Val F1: 0.6107 | Val AUPRC: 0.6201
+Epoch 100 | Loss: 0.3571 | Val Acc: 0.9147 | Val F1: 0.6324 | Val AUPRC: 0.6440
+
+===== 测试集指标 =====
+Accuracy    : 0.9287
+Precision   : 0.9000
+Recall      : 0.5488
+F1 Score    : 0.6818
+AUPRC       : 0.6717
+
+
+主方法 AM-GAML 第1次运行结果
+Final Test Results:
+ACC: 0.9626
+PRECISION: 0.9238
+RECALL: 0.9385
+F1: 0.9310
+AUPRC: 0.9212
+
+Final Test Results:
+ACC: 0.9610
+PRECISION: 0.9194
+RECALL: 0.9375
+F1: 0.9281
+AUPRC: 0.9322
+
+Final Test Results:
+ACC: 0.9525
+PRECISION: 0.9006
+RECALL: 0.9281
+F1: 0.9136
+AUPRC: 0.9353
+
+Final Test Results:
+ACC: 0.9643
+PRECISION: 0.9179
+RECALL: 0.9570
+F1: 0.9360
+AUPRC: 0.9127
+
+
+Final Test Results:
+ACC: 0.9610
+PRECISION: 0.9221
+RECALL: 0.9331
+F1: 0.9275
+AUPRC: 0.9181
