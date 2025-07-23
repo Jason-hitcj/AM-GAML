@@ -225,13 +225,26 @@ def train_and_evaluate(data, model_type='sage', hidden_channels=64, epochs=30, l
 
                 probs = F.softmax(out, dim=1)
                 pred = probs.argmax(dim=1)
+
+                # 计算训练集指标
+                train_mask = data['customer'].train_mask
+                train_true = data['customer'].y[train_mask].cpu().numpy()
+                train_pred = pred[train_mask].cpu().numpy()
+                train_prob = probs[train_mask][:, 1].cpu().numpy()
+                train_metrics = calculate_metrics(train_true, train_pred, train_prob)
+
+                # 计算验证集指标
                 val_mask = data['customer'].val_mask
                 val_true = data['customer'].y[val_mask].cpu().numpy()
                 val_pred = pred[val_mask].cpu().numpy()
-                val_prob = probs[val_mask][:, 1].cpu().numpy() # 假设正类为1
+                val_prob = probs[val_mask][:, 1].cpu().numpy()
                 val_metrics = calculate_metrics(val_true, val_pred, val_prob)
 
-                print(f"Epoch {epoch:03d} | Loss: {loss:.4f} | Val Acc: {val_metrics['Accuracy']:.4f} | Val F1: {val_metrics['F1 Score']:.4f} | Val AUPRC: {val_metrics['AUPRC']:.4f}")
+                print(f"Epoch {epoch:03d} | Loss: {loss:.4f}")
+                print(f"  Train | Acc: {train_metrics['Accuracy']:.4f} | F1: {train_metrics['F1 Score']:.4f} | Precision: {train_metrics['Precision']:.4f} | Recall: {train_metrics['Recall']:.4f} | AUPRC: {train_metrics['AUPRC']:.4f}")
+                print(f"  Val   | Acc: {val_metrics['Accuracy']:.4f} | F1: {val_metrics['F1 Score']:.4f} | Precision: {val_metrics['Precision']:.4f} | Recall: {val_metrics['Recall']:.4f} | AUPRC: {val_metrics['AUPRC']:.4f}")
+
+
 
     # --- 最终在测试集上评估 ---
     model.eval()
@@ -279,26 +292,26 @@ if __name__ == '__main__':
 
     # # --- 训练并评估 GraphSAGE ---
     sage_model, sage_metrics = train_and_evaluate(
-        data, model_type='sage', epochs=100, lr=0.001
+        data, model_type='sage', epochs=200, lr=0.001, verbose_interval=20
     )
 
     # --- 训练并评估 GAT ---
     gat_model, gat_metrics = train_and_evaluate(
-        data, model_type='gat', epochs=100, lr=0.001, verbose_interval=10
+        data, model_type='gat', epochs=200, lr=0.001, verbose_interval=20
     )
     print("\n=== HGT ===")
-    train_and_evaluate(data, model_type='hgt', epochs=200, lr=0.005, verbose_interval=10)
+    train_and_evaluate(data, model_type='hgt', epochs=200, lr=0.005, verbose_interval=20)
 
     print("\n=== RGCN ===")
     train_and_evaluate(data, model_type='rgcn', epochs=200, lr=0.005, verbose_interval=20)
 
-    # --- 训练并评估 MAGNN ---
+    # # --- 训练并评估 MAGNN ---
     print("\n=== MAGNN ===")
     train_and_evaluate(
         data, 
         model_type='magnn', 
-        epochs=100, 
+        epochs=400, 
         lr=0.001, 
         hidden_channels=64, 
-        verbose_interval=10
+        verbose_interval=40
     )

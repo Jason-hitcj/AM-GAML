@@ -58,7 +58,7 @@ print("\n===== 开始训练SVM模型 =====")
 # C 和 gamma 是最重要的超参数，可以后续使用验证集进行调优
 svm_model = SVC(
     kernel='rbf', 
-    C=0.1, 
+    C=5, 
     gamma='scale', 
     probability=True, 
     class_weight=None,

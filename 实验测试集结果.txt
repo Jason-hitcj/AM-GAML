@@ -8,11 +8,11 @@ auprc: 0.7825
 
 SVM 测试实验结果
 ===== 在 最终测试集 上的评估指标 =====
-Accuracy     : 0.9117
-Precision    : 0.9362
-Recall       : 0.4731
-F1 Score     : 0.6286
-AUPRC        : 0.7369
+Accuracy     : 0.9219
+Precision    : 0.8730
+Recall       : 0.5914
+F1 Score     : 0.7051
+AUPRC        : 0.7529
 
 ===== XGBoost 最终测试集评估指标 =====
 最佳迭代次数: 40

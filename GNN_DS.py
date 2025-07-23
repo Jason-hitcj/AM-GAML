@@ -10,7 +10,7 @@ import pandas as pd
 # -------------------- 数据准备 --------------------
 def load_and_prepare_data(save_path=None):
     """加载同构图数据并应用预划分的掩码"""
-    graph_path = 'data_new/homogeneous_graph_5.pt'
+    graph_path = 'data_new/homogeneous_graph_8.pt'
     id_dir='data'
     data = torch.load(graph_path)
     print(type(data))
@@ -232,7 +232,7 @@ def print_metrics(epoch, loss, train_metrics, val_metrics):
         print(f"{k.upper()}: {v:.4f}", end=" | ")
     print()
 
-def train_gnn(data, epochs=200, patience=100, eval_freq=10):
+def train_gnn(data, epochs=100, patience=100, eval_freq=10):
     """完整的训练流程"""
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = EnhancedHomoGNN(

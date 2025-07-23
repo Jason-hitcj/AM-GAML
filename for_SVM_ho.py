@@ -50,8 +50,8 @@ probs = svm.predict_proba(X_scaled)
 
 sim_matrix = cosine_similarity(probs)
 edges = []
-K = 5
-THRESHOLD = 0.7
+K =10
+THRESHOLD = 0.75
 
 for i in range(len(sim_matrix)):
     sim_scores = sim_matrix[i]
@@ -81,7 +81,7 @@ data.test_mask = test_mask
 data.cust_id = cust_ids  # 可选
 
 # -------------------- 保存 --------------------
-torch.save(data, 'data_new/homogeneous_graph_5.pt')
+torch.save(data, 'data_new/homogeneous_graph_10.pt')
 print(data)
 print("✅ 同构图构建完成（含 train/val/test 划分）")
 print("节点数:", data.x.shape[0])

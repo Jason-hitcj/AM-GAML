@@ -14,22 +14,22 @@ def plot_all_metrics_one_figure(k_values, metrics_data, save_path='img_knn/all_m
     
     # 定制颜色和样式配置
     color_map = {
-        'acc': 'red',          # 红色
-        'precision': 'gold',   # 黄色
-        'recall': 'green',     # 绿色
-        'f1': 'blue',          # 蓝色
-        'auprc': 'brown'       # 棕色
+        'Accuracy': 'red',          # 红色
+        'Precision': 'gold',   # 黄色
+        'Recall': 'green',     # 绿色
+        'F1 Score': 'blue',          # 蓝色
+        'AUPRC': 'brown'       # 棕色
     }
     
     line_styles = ['-', '--', '-.', ':', (0, (3, 1, 1, 1))]
     markers = ['o', 's', 'D', '^', 'v']
     
     # 按指定顺序绘制指标（确保图例顺序一致）
-    for i, metric_name in enumerate(['acc', 'precision', 'recall', 'f1', 'auprc']):
+    for i, metric_name in enumerate(['Accuracy', 'Precision', 'Recall', 'F1 Score', 'AUPRC']):
         plt.plot(
             k_values, 
             metrics_data[metric_name],
-            label=metric_name.upper(),
+            label=metric_name,
             color=color_map[metric_name],
             linestyle=line_styles[i % len(line_styles)],
             marker=markers[i % len(markers)],
@@ -67,17 +67,17 @@ if __name__ == "__main__":
     # K值范围
     k_values = [3, 4, 5, 6, 7, 8, 9, 10]
     
-    # 模拟数据
+    # 更新后的数据（与表格一致）
     metrics_data = {
-        'acc': [0.9496, 0.9535, 0.9597, 0.9496, 0.9302, 0.9302, 0.9341, 0.9380],
-        'precision': [0.9452, 0.9492, 0.9560, 0.9452, 0.9256, 0.9257, 0.9295, 0.9334],
-        'recall': [0.9544, 0.9577, 0.9624, 0.9544, 0.9351, 0.9365, 0.9384, 0.9431],
-        'f1': [0.9486, 0.9525, 0.9587, 0.9486, 0.9288, 0.9290, 0.9327, 0.9368],
-        'auprc': [0.9394, 0.9373, 0.9628, 0.9640, 0.9301, 0.9577, 0.9210, 0.9539]
+        'Accuracy': [0.9559, 0.9609, 0.9604, 0.9593, 0.9632, 0.9674, 0.9666, 0.9643],
+        'Precision': [0.906, 0.9215, 0.9216, 0.9187, 0.9183, 0.9276, 0.9241, 0.9196],
+        'Recall': [0.9359, 0.9346, 0.9313, 0.9306, 0.9505, 0.9553, 0.9583, 0.9541],
+        'F1 Score': [0.92, 0.9276, 0.9263, 0.9243, 0.9334, 0.9407, 0.9398, 0.9356],
+        'AUPRC': [0.9394, 0.9373, 0.9628, 0.9640, 0.9301, 0.9577, 0.9210, 0.9539]  # 这部分数据保持不变，因为表格中没有
     }
     
     plot_all_metrics_one_figure(
         k_values=k_values,
         metrics_data=metrics_data,
-        save_path='img_knn/all_metrics_comparison.png'
+        save_path='img_knn/all_metrics_comparison_new.png'
     )

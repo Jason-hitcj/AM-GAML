@@ -2,86 +2,88 @@ import matplotlib.pyplot as plt
 import os
 
 def plot_train_val_metrics(metrics_data, save_dir='training_metrics'):
-
     # 定义x轴（假设是0-100，每10epoch一个点）
     epochs = list(range(0, 101, 10))
     x_ticks = [0, 20, 40, 60, 80, 100]
-    
+
     # 创建保存目录
     os.makedirs(save_dir, exist_ok=True)
-    
-    # 定义绘图样式
+
+    # 美观的配色和标记
     style = {
-        'train': {'color': '#1f77b4', 'marker': 'o', 'label': 'Train'},
-        'val': {'color': '#ff7f0e', 'marker': 's', 'label': 'Validation'}
+        'train': {'color': '#4C72B0', 'marker': 'o', 'label': 'Train'},
+        'val': {'color': '#DD8452', 'marker': 's', 'label': 'Validation'}
     }
-    
-    # 定义要绘制的5个指标及其显示名称
+
+    # 要绘制的指标及其显示名称（不再固定ylim）
     metrics = {
-        'acc': {'title': 'Accuracy', 'ylim': (0, 1.05)},
-        'precision': {'title': 'Precision', 'ylim': (0, 1.05)},
-        'recall': {'title': 'Recall', 'ylim': (0, 1.05)},
-        'f1': {'title': 'F1 Score', 'ylim': (0, 1.05)},
-        'auprc': {'title': 'AUPRC', 'ylim': (0, 1.05)}
+        'acc': 'Accuracy',
+        'precision': 'Precision',
+        'recall': 'Recall',
+        'f1': 'F1 Score',
+        'auprc': 'AUPRC'
     }
-    
-    # 为每个指标创建图表
-    for metric, config in metrics.items():
+
+    for metric, title in metrics.items():
         plt.figure(figsize=(8, 5))
-        
-        # 绘制训练集和验证集曲线
+
+        # 获取所有值以便设定ylim范围
+        all_values = []
         for phase in ['train', 'val']:
             if metric in metrics_data[phase]:
+                values = metrics_data[phase][metric]
+                all_values.extend(values)
                 plt.plot(
                     epochs,
-                    metrics_data[phase][metric],
-                    label=f"{style[phase]['label']} {config['title']}",
+                    values,
+                    label=f"{style[phase]['label']} {title}",
                     color=style[phase]['color'],
                     marker=style[phase]['marker'],
                     markersize=6,
-                    linewidth=2
+                    linewidth=2.5
                 )
-        
-        # 设置图表样式
-        plt.title(f"{config['title']} Training Progress", fontsize=20, pad=10)
-        plt.xlabel('Epoch', fontsize=16)
-        plt.ylabel(config['title'], fontsize=16)
-        plt.xticks(x_ticks,fontsize=16)
 
-        plt.yticks(fontsize=16) 
-        plt.ylim(config['ylim'])
-        plt.grid(True, alpha=0.3)
-        
-        # 添加图例
-        plt.legend(fontsize=16, framealpha=0.9)
-        
+        # 设置图表样式
+        plt.title(f"{title} Training Progress", fontsize=20, pad=10)
+        plt.xlabel('Epoch', fontsize=16)
+        plt.ylabel(title, fontsize=16)
+        plt.xticks(x_ticks, fontsize=14)
+        plt.yticks(fontsize=14)
+
+        # 纵轴范围自动适应上升趋势（设置下限为最小值-0.05，但不低于0）
+        ymin = max(min(all_values) - 0.05, 0)
+        ymax = min(max(all_values) + 0.05, 1.05)
+        plt.ylim((ymin, ymax))
+
+        plt.grid(True, linestyle='--', alpha=0.3)
+
+        # 图例放在右下角
+        plt.legend(fontsize=14, loc='lower right', framealpha=0.95)
+
         # 保存图片
-        filename = os.path.join(save_dir, f"{metric}_progress1.png")
+        filename = os.path.join(save_dir, f"{metric}_progress.png")
         plt.savefig(filename, dpi=600, bbox_inches='tight')
         print(f"Saved: {filename}")
         plt.close()
 
 # 示例使用
 if __name__ == "__main__":
-    # 示例数据（11个点对应0-100epoch）
-    example_data = {
+    # 训练数据（11个点对应0-100epoch）
+    training_data = {
         'train': {
-            'acc': [0.5749, 0.9389, 0.9456, 0.9448, 0.9498, 0.9498, 0.9523, 0.9531, 0.9515, 0.9548, 0.9598],
-            'precision': [0.6405, 0.9374, 0.9443, 0.9427, 0.9483, 0.9482, 0.9506, 0.9512, 0.9496, 0.9534, 0.9586],
-            'recall': [0.5176, 0.9389, 0.9455, 0.9464, 0.9501, 0.9503, 0.9531, 0.9545, 0.9526, 0.9552, 0.9601],
-            'f1': [0.4091, 0.9381, 0.9448, 0.9442, 0.9491, 0.9491, 0.9517, 0.9526, 0.9509, 0.9542, 0.9593],
-            'auprc': [0.5478, 0.9161, 0.9561, 0.9421, 0.9566, 0.9615, 0.9596, 0.9597, 0.9511, 0.9538, 0.9644]
+            'acc': [0.6223, 0.8848, 0.8873, 0.8924, 0.8937, 0.8912, 0.8886, 0.9321, 0.9488, 0.9770, 0.9808],
+            'precision': [0.5223, 0.8898, 0.8663, 0.8591, 0.8562, 0.8490, 0.8150, 0.9123, 0.8960, 0.9483, 0.9548],
+            'recall': [0.5317, 0.7221, 0.7464, 0.7722, 0.7806, 0.7790, 0.8554, 0.8623, 0.9657, 0.9832, 0.9881],
+            'f1': [0.5130, 0.7689, 0.7863, 0.8050, 0.8103, 0.8069, 0.8325, 0.8844, 0.9248, 0.9645, 0.9703],
+            'auprc': [0.2188, 0.7633, 0.7828, 0.8073, 0.8194, 0.8328, 0.8113, 0.9126, 0.9237, 0.9764, 0.9690]
         },
         'val': {
-            'acc': [0.4784, 0.9176, 0.9333, 0.9333, 0.9333, 0.9333, 0.9333, 0.9333, 0.9255, 0.9216, 0.9176],
-            'precision': [0.7263, 0.9165, 0.9325, 0.9325, 0.9325, 0.9325, 0.9325, 0.9325, 0.9237, 0.9201, 0.9152],
-            'recall': [0.5414, 0.9155, 0.9315, 0.9315, 0.9315, 0.9315, 0.9315, 0.9315, 0.9246, 0.9201, 0.9177],
-            'f1': [0.3880, 0.9160, 0.9320, 0.9320, 0.9320, 0.9320, 0.9320, 0.9320, 0.9241, 0.9201, 0.9163],
-            'auprc': [0.8710, 0.9421, 0.9430, 0.9451, 0.9336, 0.9171, 0.8992, 0.8832, 0.8785, 0.8724, 0.8727]
+            'acc': [0.8413, 0.8345, 0.9113, 0.9044, 0.9044, 0.9027, 0.9096, 0.9300, 0.9471, 0.9590, 0.9642],
+            'precision': [0.4206, 0.7261, 0.8427, 0.8326, 0.8305, 0.8260, 0.8329, 0.8700, 0.8836, 0.9060, 0.9179],
+            'recall': [0.5000, 0.8362, 0.8120, 0.7905, 0.7949, 0.7939, 0.8241, 0.8668, 0.9380, 0.9538, 0.9569],
+            'f1': [0.4569, 0.7555, 0.8262, 0.8092, 0.8110, 0.8086, 0.8284, 0.8684, 0.9076, 0.9277, 0.9359],
+            'auprc': [0.1233, 0.8009, 0.8207, 0.8116, 0.8104, 0.8171, 0.8435, 0.8708, 0.8664, 0.9035, 0.9312]
         }
     }
-    
-    plot_train_val_metrics(
-        metrics_data=example_data,
-        save_dir='training_metrics'
-    )
+
+    plot_train_val_metrics(training_data, save_dir='training')

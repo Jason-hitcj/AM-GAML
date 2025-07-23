@@ -13,41 +13,41 @@ from sklearn.metrics import (
 import xgboost as xgb
 from tqdm import tqdm
 
-# 1. 读取数据
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+
+# 1. 读取包含全部节点特征和标签的数据
 df = pd.read_csv("data_new/customer_node_features_gnn.csv")  
 
-# 2. 提取特征和标签
+# 2. 提取特征列
 feature_cols = [f"feature_{i}" for i in range(64)]
-X = df[feature_cols].values
-y = df["label"].values
 
-# 3. 读取预先划分好的ID列表
+# 3. 读取划分好的 ID 列表
 train_ids = pd.read_csv('data_new/train_ids.csv')['CUST_ID'].tolist()
 val_ids = pd.read_csv('data_new/val_ids.csv')['CUST_ID'].tolist()
 test_ids = pd.read_csv('data_new/test_ids.csv')['CUST_ID'].tolist()
 
-# 4. 创建ID到索引的映射字典
-id_to_index = {cust_id: idx for idx, cust_id in enumerate(df['CUST_ID'])}
+# 4. 通过 CUST_ID 直接筛选出对应的数据行
+train_df = df[df['CUST_ID'].isin(train_ids)]
+val_df = df[df['CUST_ID'].isin(val_ids)]
+test_df = df[df['CUST_ID'].isin(test_ids)]
 
-# 5. 获取对应的索引位置
-train_indices = [id_to_index[id_] for id_ in train_ids]
-val_indices = [id_to_index[id_] for id_ in val_ids]
-test_indices = [id_to_index[id_] for id_ in test_ids]
+# 5. 提取特征和标签
+X_train_raw = train_df[feature_cols].values
+y_train = train_df["label"].values
 
-# 6. 按照索引划分数据集 (先划分，后归一化)
-X_train_raw = X[train_indices]
-X_val_raw = X[val_indices]
-X_test_raw = X[test_indices]
+X_val_raw = val_df[feature_cols].values
+y_val = val_df["label"].values
 
-y_train = y[train_indices]
-y_val = y[val_indices]
-y_test = y[test_indices]
+X_test_raw = test_df[feature_cols].values
+y_test = test_df["label"].values
 
-# 7. 特征归一化 (修正了数据泄露问题)
+# 6. 特征归一化（只使用训练集进行拟合）
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train_raw)
 X_val = scaler.transform(X_val_raw)
 X_test = scaler.transform(X_test_raw)
+
 
 # 8. 验证划分结果
 print(f"训练集形状: X_train={X_train.shape}, y_train={y_train.shape}")
